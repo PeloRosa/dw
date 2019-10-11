@@ -12,15 +12,6 @@
     </script>
 </head>
 <body>
-<!-- 迷你购物车 -->
-    <div class="mini_cart">
-        <h4 class="mini_cart_header"><img src="img/close.png"></img> 购物车</h4>
-        <div class="mini_cart_content">
-            <span>您的购物车中没有商品</span>
-            <button>继续选购</button>
-        </div>
-    </div>
-    <div class="mini_cart_cover"></div>
 <!-- header -->
     <div class="header">
         <div class="header_top">
@@ -74,7 +65,6 @@
                                 <li><a href="#">织纹手表</a></li>
                             </ul>
                             <ul class="inner_three_img">
-                                <li><img src="img/levelTwo_img02.png" alt=""></li>
                             </ul>
                         </ul>
                         <!-- 第三板块结束 -->
@@ -111,45 +101,59 @@
                 <div class="banner_text">
                     <div class="banner_text_box">
                         <span>表饰相伴，情意相随</span>
-                        <h1>此刻爱意 此刻献</h1>
+                        <h1>悦享爱意，报以时光</h1>
                     </div>
                 </div>
-                <li class="banner" style="padding-top:70px;background:rgba(132,655,456)">
-                    <img src="img/login_banner.jpg" style="height:100%;" alt="丹尼尔惠灵顿 此刻爱意 此刻献刻">
+                <li class="banner_img">   
                 </li>
             </ul>
+
+    <!-- form -->
+        <div class="form_box">
+            <div class="inputBox">
+                <span>手机号码</span>
+                <input type="text" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="mobliePhone" placeholder="请输入您的手机号码" maxlength="11">
+            </div>
+            <div class="inputBox">
+                <span>验证码</span>
+                <input type="text" disabled="true" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" id="testifyCode" placeholder="请输入您的手机号码" maxlength="11">
+                <input type="button" value="获取验证码" id="getATestifyCode">
+            </div>
+            <div class="btn_submit">登录</div>
+            <div class="go_register">还不是会员？<a href="#">立即注册</a></div>
+        </div>
+
+
     <!-- footer info-->
-            <li class="footer_info">
-                <div class="footer_bottom">
-                    <ul class="made-menu ">
-                        <li class="">
-                            <a href="#">使用条款 </a>
-                        </li>
-                        <li class="">
-                            <a href="#">隐私保护政策 </a>
-                        </li>
-                        <li class="">
-                            <a href="#">防伪声明 </a>
-                        </li>
-                        <li class="">
-                            <a href="#">网站地图 </a>
-                        </li>
-                    </ul>
-                    <div class="footer_copyright">
-                        <div class="copyright_list">
-                            <span style="float:left;">
-                                <img src="img/policy.png">
-                            </span>
-                            <a href="" target="_blank">粤公网安备 44030502000796号</a> | 
-                            <a target="_blank" href="">粤ICP备15098750号-1M</a> | 
-                            <a target="_blank" href="">营业执照</a>
-                        </div>
-                        <p>ALL RIGHTS RESERVED. COPYRIGHT © 丹尼尔惠灵顿贸易（深圳）有限公司</p>        
+        <div class="footer_info">
+            <div class="footer_bottom">
+                <ul class="made-menu ">
+                    <li class="">
+                        <a href="#">使用条款 </a>
+                    </li>
+                    <li class="">
+                        <a href="#">隐私保护政策 </a>
+                    </li>
+                    <li class="">
+                        <a href="#">防伪声明 </a>
+                    </li>
+                    <li class="">
+                        <a href="#">网站地图 </a>
+                    </li>
+                </ul>
+                <div class="footer_copyright">
+                    <div class="copyright_list">
+                        <span style="float:left;">
+                            <img src="img/policy.png">
+                        </span>
+                        <a href="" target="_blank">粤公网安备 44030502000796号</a> | 
+                        <a target="_blank" href="">粤ICP备15098750号-1M</a> | 
+                        <a target="_blank" href="">营业执照</a>
                     </div>
+                    <p>ALL RIGHTS RESERVED. COPYRIGHT © 丹尼尔惠灵顿贸易（深圳）有限公司</p>        
                 </div>
-            </li>
-        </ul>
-    </div>
+            </div>
+        </div>
 </body>
 </html>
 <script src="js/register.js"></script>
