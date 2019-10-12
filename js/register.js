@@ -1,18 +1,18 @@
 window.onload = function(){
     // 效果一：
     // header_top部分网页滚动，导航变化效果
-    if($(window).scrollTop()>0){
+    if($(window).scrollTop()>100){
         $(".header_top").addClass("scrolling_header_top");
         $(".header_btm").addClass("scrolling_header_btm");
-        $(".header_btm li a").css({lineHeight:"82px",height:"82px"});
+        $(".header_btm li a").css({lineHeight:"70px",height:"70px"});
         $(".header_btm a:first").addClass("header_left_logo");
         $(".levelTwo ul li a").css({lineHeight:"30px",height:"13px"});
     }
     window.onscroll = function(){
-        if($(window).scrollTop()>0){
+        if($(window).scrollTop()>100){
             $(".header_top").addClass("scrolling_header_top");
             $(".header_btm").addClass("scrolling_header_btm");
-            $(".header_btm li a").css({lineHeight:"82px",height:"82px"});
+            $(".header_btm li a").css({lineHeight:"70px",height:"70px"});
             $(".header_btm a:first").addClass("header_left_logo");
             $(".levelTwo ul li a").css({lineHeight:"30px",height:"13px"});
         }else{
@@ -84,5 +84,31 @@ window.onload = function(){
             $(this).parent().css({display:"none"});
         }
     });
-
 }
+
+//注册页面的Ajax部分
+$("#register_btn_submit").click(function(){
+    //创建对象
+    let xhr = new XMLHttpRequest();
+    xhr.open("post","php/register.php",true);
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState==4 && xhr.status==200){
+            // console.log(xhr.responseText);
+            if(xhr.responseText == "-1"){
+                $(".mobliePhone_error")[0].innerHTML = "*该手机号已经注册";
+                $(".mobliePhone_error")[0].style.display = "block";
+            }else if(xhr.responseText == "0"){
+                $(".mobliePhone_error")[0].innerHTML = "*注册失败";
+                $(".mobliePhone_error")[0].style.display = "block";
+            }else{
+                $(".mobliePhone_error")[0].innerHTML = "√注册成功";
+                $(".mobliePhone_error")[0].style.display = "block";
+                $(".mobliePhone_error")[0].style.color = "green";
+            }
+        }
+    }
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    let sendstr = `username=${$("#name")[0].value}&mobliePhoneNum=${$("#mobliePhone")[0].value}&sex=${$("#sex")[0].value}`;
+    xhr.send(sendstr);
+});
+

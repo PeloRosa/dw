@@ -1,7 +1,6 @@
 @import "login";
-.inputBox{
-    float: left;
-}
+
+
 #sex{
     width:400px;
     height: 50px;
@@ -42,6 +41,7 @@
             content: "✓";
                 font-size: 15px;
                 line-height: 15px;
+                color:red;
             }
         }
     }

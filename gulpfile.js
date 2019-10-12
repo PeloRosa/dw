@@ -7,7 +7,7 @@ gulp.task("copy-html",function(){
 });
 
 gulp.task("copyAllFile",function(){
-    return gulp.src(["*/**/*","!scss/**/*","*.html"]).pipe(gulp.dest("D:\\phpStudy\\WWW\\DW"));
+    return gulp.src(["*/**/*","!scss/**/*","!node_modules/**/*","*.html"]).pipe(gulp.dest("D:\\phpStudy\\WWW\\DW"));
 });
 
 // gulp.task("copy-data",function(){
@@ -36,6 +36,11 @@ gulp.task("watchall",async ()=>{
     gulp.watch("css/*.css",async ()=>{
         gulp.src("css/*.css")
         .pipe(gulp.dest("D:\\phpStudy\\WWW\\DW\\css"));
+    });
+
+    gulp.watch("php/*.php",async ()=>{
+        gulp.src("php/*.php")
+        .pipe(gulp.dest("D:\\phpStudy\\WWW\\DW\\php"));
     });
 
     gulp.watch("scss/**/*.scss",async ()=>{

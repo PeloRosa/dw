@@ -190,7 +190,7 @@ img{
 }
 .header_btm_innerbox{
     width:300px;
-    overflow: hidden;
+    // overflow: hidden;
     margin:0 auto;
 }
 .lineGif{
@@ -288,16 +288,26 @@ $borderStyle:1px solid rgb(221, 221, 221);
     padding:{
         top:$baseMargin;
         bottom: $baseMargin;
+        left:20px;
+        right:20px;
     }
     letter-spacing:2px;
-}
-.form_box{
     margin:$marginAuto;
     text-align: center;
     width:$baseWidth;
     .inputBox{
+        position:relative;
         padding-bottom: 40px;
-        overflow: hidden;
+        .error_tip{
+            position: absolute;
+            z-index: 2;
+            top:88px;
+            left:0;
+            font-size: 13px;
+            color:red;
+            text-align: left;
+            display:none;
+        }
     }
     input{
         border-radius: 2px;
@@ -352,7 +362,22 @@ $borderStyle:1px solid rgb(221, 221, 221);
         }
     }
 }
-
+.inputBox{
+    position: relative;
+    float: left;
+    input[type="text"]{
+        &:focus{
+            border-color: white rgb(211,211,211);
+            // border-bottom: 3px solid red;
+            outline: 0;
+            box-shadow: 0 0 10px #ccc;
+        }
+    }
+    select{
+            outline: 0;
+            border-color: white rgb(211,211,211);
+    }
+}
 
 
 
