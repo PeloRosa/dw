@@ -87,31 +87,28 @@ window.onload = function(){
 }
 
 //注册页面的Ajax部分
-$("#register_btn_submit").click(function(){
+$("#login_btn_submit").click(function(){
     //创建对象
     let xhr = new XMLHttpRequest();
-    xhr.open("post","php/register.php",true);
+    xhr.open("post","php/login.php",true);
     xhr.onreadystatechange = function(){
         if(xhr.readyState==4 && xhr.status==200){
             // console.log(xhr.responseText);
-            if(xhr.responseText == "-1"){
-                $(".mobliePhone_error")[0].innerHTML = "*该手机号已经注册";
-                $(".mobliePhone_error")[0].style.display = "block";
-            }else if(xhr.responseText == "0"){
-                $(".mobliePhone_error")[0].innerHTML = "*注册失败";
+            if(xhr.responseText == "0"){
+                $(".mobliePhone_error")[0].innerHTML = "该手机号还未注册，请注册";
                 $(".mobliePhone_error")[0].style.display = "block";
             }else{
-                $(".mobliePhone_error")[0].innerHTML = "√注册成功";
+                $(".mobliePhone_error")[0].innerHTML = "登陆成功，即将跳转主页";
                 $(".mobliePhone_error")[0].style.display = "block";
                 $(".mobliePhone_error")[0].style.color = "green";
                 setTimeout(function(){
-                    window.location.href = "/DW/login.html"
-                },1000);
+                    window.location.href = "/DW/index.html";
+                },3000);
             }
         }
     }
     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    let sendstr = `username=${$("#name")[0].value}&mobliePhoneNum=${$("#mobliePhone")[0].value}&sex=${$("#sex")[0].value}`;
+    let sendstr = `mobliePhoneNum=${$("#mobliePhone")[0].value}`;
     xhr.send(sendstr);
 });
 
