@@ -1,54 +1,54 @@
-// window.onload = function(){
-//     // 效果一：
-//     // header_top部分网页滚动，导航变化效果
-//     if($(window).scrollTop()>100){
-//         $(".header_top").addClass("scrolling_header_top");
-//         $(".header_btm").addClass("scrolling_header_btm");
-//         $(".header_btm li a").css({lineHeight:"70px",height:"70px"});
-//         $(".header_btm a:first").addClass("header_left_logo");
-//         $(".levelTwo ul li a").css({lineHeight:"30px",height:"13px"});
-//     }
-//     window.onscroll = function(){
-//         if($(window).scrollTop()>100){
-//             $(".header_top").addClass("scrolling_header_top");
-//             $(".header_btm").addClass("scrolling_header_btm");
-//             $(".header_btm li a").css({lineHeight:"70px",height:"70px"});
-//             $(".header_btm a:first").addClass("header_left_logo");
-//             $(".levelTwo ul li a").css({lineHeight:"30px",height:"13px"});
-//         }else{
-//             $(".header_top").removeClass("scrolling_header_top");
-//             $(".header_btm").removeClass("scrolling_header_btm");
-//             $(".header_btm li a").css({lineHeight:"61.6px",height:"61.6px"});
-//             $(".header_btm a:first").removeClass("header_left_logo");
-//             $(".levelTwo ul li a").css({lineHeight:"30px",height:"13px"});
-//         }
-//     }
+window.onload = function(){
+    // 效果一：
+    // header_top部分网页滚动，导航变化效果
+    if($(window).scrollTop()>100){
+        $(".header_top").addClass("scrolling_header_top");
+        $(".header_btm").addClass("scrolling_header_btm");
+        $(".header_btm li a").css({lineHeight:"70px",height:"70px"});
+        $(".header_btm a:first").addClass("header_left_logo");
+        $(".levelTwo ul li a").css({lineHeight:"30px",height:"13px"});
+    }
+    window.onscroll = function(){
+        if($(window).scrollTop()>100){
+            $(".header_top").addClass("scrolling_header_top");
+            $(".header_btm").addClass("scrolling_header_btm");
+            $(".header_btm li a").css({lineHeight:"70px",height:"70px"});
+            $(".header_btm a:first").addClass("header_left_logo");
+            $(".levelTwo ul li a").css({lineHeight:"30px",height:"13px"});
+        }else{
+            $(".header_top").removeClass("scrolling_header_top");
+            $(".header_btm").removeClass("scrolling_header_btm");
+            $(".header_btm li a").css({lineHeight:"61.6px",height:"61.6px"});
+            $(".header_btm a:first").removeClass("header_left_logo");
+            $(".levelTwo ul li a").css({lineHeight:"30px",height:"13px"});
+        }
+    }
 
-//     // 效果二：
-//     // 鼠标悬浮header_btm li , 二级菜单div显示
-//     $(".header_btm li").mouseover(function(){
-//         $(this).children(".levelTwo").show();
-//     });
-//     $(".header_btm li").mouseout(function(){
-//         $(this).children(".levelTwo").hide();
-//     });
+    // 效果二：
+    // 鼠标悬浮header_btm li , 二级菜单div显示
+    $(".header_btm li").mouseover(function(){
+        $(this).children(".levelTwo").show();
+    });
+    $(".header_btm li").mouseout(function(){
+        $(this).children(".levelTwo").hide();
+    });
 
-//     // 二级菜单显示鼠标悬浮在第二列出现不同第三列
-//     $(".inner_two > li").mouseover(function(){
-//         $($(".inner_two ~ .inner_three")[0]).show();
-//         $($(".inner_two ~ .inner_three")[1]).hide();
-//         $($(".inner_two ~ .inner_three")[2]).hide();
-//     });
-//     for(let i = 0 ; i < 3 ; i++){
-//         $($(".inner_two > li")[i]).mouseover(function(){
-//             $($(".inner_two ~ .inner_three")[0]).hide();
-//             $($(".inner_two ~ .inner_three")[1]).hide();
-//             $($(".inner_two ~ .inner_three")[2]).hide();
-//             $($(".inner_two ~ .inner_three")[i]).show();
-//         });
-//     }
+    // 二级菜单显示鼠标悬浮在第二列出现不同第三列
+    $(".inner_two > li").mouseover(function(){
+        $($(".inner_two ~ .inner_three")[0]).show();
+        $($(".inner_two ~ .inner_three")[1]).hide();
+        $($(".inner_two ~ .inner_three")[2]).hide();
+    });
+    for(let i = 0 ; i < 3 ; i++){
+        $($(".inner_two > li")[i]).mouseover(function(){
+            $($(".inner_two ~ .inner_three")[0]).hide();
+            $($(".inner_two ~ .inner_three")[1]).hide();
+            $($(".inner_two ~ .inner_three")[2]).hide();
+            $($(".inner_two ~ .inner_three")[i]).show();
+        });
+    }
 
-// }
+}
 
 // 效果七：生成验证码
 function getATestifyCode(){
@@ -111,23 +111,33 @@ $("#register_btn_submit").click(function(){
         submitOrNot1 = false;
         $(this).prev().children()[2].innerHTML = "*请同意注册协议";
         $(this).prev().children()[2].style.display = "block";
+        return;
     }
     if(($("#getATestifyCode").prev().val()==$("#getATestifyCode").next().val())&&$("#getATestifyCode").prev().val()!=""){
         $("#getATestifyCode").next().next()[0].style.display = "none";        
         submitOrNot2 = true;
+    }else if($("#getATestifyCode").prev().val()==""){
+        submitOrNot2 = false;
+         $("#getATestifyCode").next().next()[0].innerHTML = "*请获取并输入验证码";
+         $("#getATestifyCode").next().next()[0].style.display = "block";
+         return;
     }else{
         submitOrNot2 = false;
-         $("#getATestifyCode").next().next()[0].innerHTML = "*验证码输入错误";
-         $("#getATestifyCode").next().next()[0].style.display = "block";
+        $("#getATestifyCode").next().next()[0].innerHTML = "*验证码输入错误";
+        $("#getATestifyCode").next().next()[0].style.display = "block";
+        return;
     };
     if($("#name").val()=="" || $("#mobliePhone").val()==""){
         submitOrNot3 = false;
         if($("#name").val()==""){
             $("#name").next().html("请输入用户名");
             $("#name").next()[0].style.display = "block";
+            $("#name")[0].style.borderBottom = "3px solid red";
+            return;
         }else{
-            $("#name").next().html("请输入用户名");
-            $("#name").next()[0].style.display = "block";
+            $("#mobliePhone").next().html("请输入手机号码");
+            $("#mobliePhone").next()[0].style.display = "block";
+            return;
         }
     }else{
         $(".agreement_box_error")[0].display = "none";
