@@ -456,7 +456,7 @@ input:-ms-input-placeholder {
       content: "✓";
       font-size: 15px;
       line-height: 15px;
-      color: red; }
+      color: green; }
   #agreement a {
     display: block;
     margin-right: 30px;
@@ -464,5 +464,13 @@ input:-ms-input-placeholder {
     float: right; }
 
 #agreement {
+  position: relative;
   margin-top: 0px;
-  margin-bottom: 40px; }
+  padding-bottom: 40px; }
+  #agreement .agreement_box_error {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: none;
+    text-align: left;
+    color: red; }
