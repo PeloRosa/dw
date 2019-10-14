@@ -1,5 +1,6 @@
 
 window.onload = function(){
+    
     // 效果一：
     // header_top部分网页滚动，导航变化效果
     if($(window).scrollTop()>0){
@@ -153,12 +154,26 @@ $(".goPre").click(function(){
 // 效果五：用户登录购物车点击显示
 $("body").click(function(e){
     let target = $(e.target);
+    let vipInfo = JSON.parse(getCookie("vipInfo"));
     if(target.is(".header_user") || target.is(".header_user span")){
-        $(".userLogin").css({display:"block"});
+            // 页面载入首先判断是否判断是否有cookie存在
+        if(vipInfo){
+            $("#logined").css({display:"block"});
+        }else{
+            $(".userLogin")[0].style.display = "block";
+        }
     }else{
-        $(".userLogin").css({display:"none"});
+        if(vipInfo){
+            $("#logined").css({display:"none"});
+        }else{
+            $(".userLogin")[0].style.display = "none";
+        }
     }
-})
+});
+$("#user-layout").click(function(){
+    removeCookie("vipInfo");
+    window.location.href = "/DW/index.html";
+});
 $("body").click(function(e){
     let target = $(e.target);
     if(target.is(".header_cart") || target.is(".header_cart span")){

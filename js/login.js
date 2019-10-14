@@ -1,4 +1,5 @@
 window.onload = function(){
+
     // 效果一：
     // header_top部分网页滚动，导航变化效果
     if($(window).scrollTop()>100){
