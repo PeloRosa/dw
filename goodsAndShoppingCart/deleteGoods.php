@@ -1,7 +1,7 @@
 <?php
 	header("Content-Type:text/html;charset=utf-8");
 	//1、接受客户端的数据（用户输入的数据）
-	$vipName   = $_REQUEST['vipName'];
+	$mobliePhoneNum   = $_REQUEST['mobliePhoneNum'];
 	$goodsId   = $_REQUEST['goodsId'];
 	
 	//2、数据保存在数据库中
@@ -14,7 +14,7 @@
 	}
 	
 	//3）、传输数据（过桥）
-	$sqlstr = "delete from  shoppingCart where vipName='".$vipName."' and goodsId='".$goodsId."'";
+	$sqlstr = "delete from  shoppingCart where mobliePhoneNum='".$mobliePhoneNum."' and goodsId='".$goodsId."'";
     $result=mysql_query($sqlstr,$conn);	
    
 	if(!$result){

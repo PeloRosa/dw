@@ -6,7 +6,7 @@
 	//$userId = "baobao1";
 	//2、在数据库中查询
 	   //1)、建立连接，并选择数据库
-	   $con = mysql_connect("localhost","root","qianfeng");
+	   $con = mysql_connect("localhost","root","root");
 	   mysql_select_db("shop1701",$con);
 	   //2)、执行SQL语句（查询）
 	   $sqlStr="select * from userTable where userId='".$userId."'";

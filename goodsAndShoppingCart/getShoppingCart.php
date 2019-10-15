@@ -1,10 +1,10 @@
 <?php
 	header("Content-Type:text/html;charset=utf-8");
-	$vipName   = $_REQUEST['vipName'];
+	$mobliePhoneNum   = $_REQUEST['mobliePhoneNum'];
 	
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
-	$conn = mysql_connect("localhost","root","qianfeng");
+	$conn = mysql_connect("localhost","root","root");
 	
 	//2）、选择数据库（找目的地）
 	if(!mysql_select_db("shoppingcenter",$conn)){
@@ -13,7 +13,7 @@
 	
 	//3）、传输数据（过桥）
 	$sqlstr = "select * from goodsInfo g,shoppingCart s
-			   where g.goodsId = s.goodsId  and s.vipName = '".$vipName."'";
+			   where g.goodsId = s.goodsId  and s.mobliePhoneNum = '".$mobliePhoneNum."'";
 	
 	$result = mysql_query($sqlstr,$conn);//执行查询的sql语句后，有返回值，返回的是查询结果
 		

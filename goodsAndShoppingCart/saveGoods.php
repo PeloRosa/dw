@@ -24,7 +24,7 @@
 	
 	//2、数据保存在数据库中
 	//1）、建立连接（搭桥）
-	$conn = mysql_connect("localhost","root","qianfeng");
+	$conn = mysql_connect("localhost","root","root");
 	if(!$conn){
 		die("数据库连接失败：".mysql_error());
 	}

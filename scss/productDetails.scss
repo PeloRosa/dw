@@ -1,0 +1,246 @@
+@import "gift";
+$baseWidth:950px;
+$baseHeight:300px;
+.header{
+    .header_top{
+        background: rgba(0, 14, 34, 0.9);
+    }
+}
+.productInfo_top{
+    width:100%;
+    // height: 989px;
+    .productInfo_main{
+        background: url(../img/RRbackground.jpg);
+        padding:{
+            top:205px;
+            bottom:60px;
+        }
+        .productInfo_main_box{
+            width: 1000px;
+            height: 607px;
+            margin: 0 auto;
+            background: white;
+            .productImg_Container,.productAction_Container{
+                width:500px;
+                height:607px;
+                background: blue;
+                float: left;
+            }
+            .productImg_Container .productImg_Container_img{
+                width:500px;
+                height:500px;
+                background:pink;
+            }
+            .productAction_Container{
+                padding: 25px 70px;
+                width:360px;
+                height:557px;
+                background-color: #fafafa;
+                h1{
+                    width:306px;
+                    height:54px;
+                    padding:{
+                        top:10px;
+                        left:20px;
+                        right:20px;
+                    }
+                    font-size: 24px;
+                    letter-spacing: 4px;
+                    text-align: center;
+                    span{
+                        font-size: 14px;
+                        text-align: center;
+                        display:block;
+                        height: 18px;
+                        width:306px;
+                        padding-bottom: 5px;
+                    }
+                    margin:7px auto 40px;
+                }
+                .product_color{
+                    margin:0 auto;
+                    width:346px;
+                    height:72.2px;
+                    padding-bottom:  20px;
+                    border-bottom: 1px solid #ddd;
+                    h3{
+                        text-align: center;
+                        width:100%;
+                        height:15.2px;
+                        font-size: 12px;
+                        margin-top: 10px;
+                        margin-bottom: 5px;
+                    }
+                    .product_select_attribute{
+                        padding:{
+                            top:10px;
+                        }
+                        width:346px;
+                        height:42px;
+                        .product_color_attr{
+                            position: relative;
+                            margin:0 auto;
+                            border-radius: 50px;
+                            width: 28px;
+                            height:28px;
+                            border:1px solid rgb(71, 158, 122);
+                            background-image: radial-gradient(circle,#ffe9cf,#e8d2ad,#d8cba1);
+                            &:after{
+                                height:10px;
+                                width:10px;
+                                text-indent: 2px;
+                                font-size: 10px;
+                                position: absolute;
+                                top:-2px;
+                                right:-4px;
+                                border:1px solid rgb(71, 158, 122);
+                                display:block;
+                                border-radius: 50%;
+                                color: rgb(71, 158, 122);
+                                content:"√";
+                                background: white;
+                            }
+                        }
+                    }
+                    
+                }
+                .product_size{
+                    width:316px;
+                    height:80px;
+                    padding:20px 15px;
+                    padding-bottom: 0px;
+                    margin:0 auto;
+                    .attribute-header{
+                        margin:10px auto 5px;
+                        width:316px;
+                        height:12px;
+                        line-height: 12px;
+                        font-size: 12px;
+                        text-align: center;
+                    }
+                    .sizes{
+                        width: 316px;
+                        height: 50px;
+                        text-align: center;
+                        a{
+                            line-height: 50px;
+                            .size-text{
+                                margin:{
+                                    left:13px;
+                                    right:6px;
+                                }
+                                display:inline-block;
+                                height: 28px;
+                                width: 28px;
+                                border:1px solid black;
+                                border-radius: 50%;
+                                font-size: 11px;
+                                text-align: center;
+                                line-height: 28px;
+                            }
+                            &:nth-child(1) {
+                                .size-text{
+                                    background: rgb(71, 158, 122);
+                                    border:1px solid rgb(71, 158, 122);
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+                .purchaseBox{
+                    color: #cdbc7a;
+                    width: 360px;
+                    height:76.8px;
+                    text-align: center;
+                    font-size: 13px;
+                    margin:0 auto;
+                    .purchaseBox_button{
+                        background: black;
+                        text-align: left;
+                        display: block;
+                        width: 318px;
+                        margin:26px auto 0;
+                        height:48px;
+                        padding:{
+                            left:20px;
+                            right: 20px;
+                        }
+                        .btn-price{
+                            width: 170px;
+                            border-right: 1px solid #cdbc7a;
+                            display:inline-block;
+                            height:13px;
+                            margin-top: 20px;
+                            text-align: center;
+                        }
+                        .price,.btn-label{
+                            // line-height: 48px;
+                            font-size: 13px;
+                            line-height: 11px;
+                        }
+                        
+                        .btn-label{
+                            font-size: 10px;
+                            display:inline-block;
+                            margin-left: 55px;
+                            line-height: 9px;
+                        }
+                        border: 1px solid #cdbc7a;
+                    }
+                }
+            }
+            .productImg_Container_smallImg{
+                width:500px;
+                height:107px;
+                background:white;
+                box-sizing: border-box;
+                padding:10px;
+                .productImg_Container_smallImg_showBox{
+                    width:380px;
+                    height:87px;
+                    padding:0 50px;
+                    position:relative;
+                    .smallImg_showBox_LongBox{
+                        position:relative;
+                        top:0;
+                        left: 0;
+                        width: 1905px;
+                        height:87px;
+                    }
+                }
+            }
+        }
+    }
+    .custom_made{
+        width:100%;
+        height:202px;
+        padding:{
+            top:40px;
+            bottom:20px;
+        }
+        margin-top: -60px;
+        background:white;
+    }
+    .product_parameter_list{
+        width:950px;
+        height:757px;
+        margin: 60px auto 30px;
+        background:brown;
+    }
+    .product_config{
+        width:$baseWidth;
+        height:$baseHeight;
+        background: gray;
+        margin:0 auto 10px;
+    }
+    .priceExplain{
+        width:1000px;
+        margin:0 auto;
+        height: $baseHeight;
+        border:{
+            top:1px solid #ddd;
+            bottom:1px solid #ddd;
+        }
+    }
+}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情页面︱DW（Daniel Wellington）丹尼尔惠灵顿手表中国官网</title>
+    <link rel="stylesheet" href="css/productDetails.css">
+    <link rel="icon" href="https://www.danielwellington.cn/skin/frontend/rwd/marvel/images/favicon/favicon-32.png" sizes="32x32">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+    </script>
+</head>
+<body>
+<!-- 迷你购物车 -->
+    <div class="mini_cart">
+        <h4 class="mini_cart_header"><img src="img/close.png"></img> 购物车</h4>
+        <div class="mini_cart_content">
+            <span>您的购物车中没有商品</span>
+            <button>继续选购</button>
+        </div>
+    </div>
+    <div class="mini_cart_cover"></div>
+<!-- header -->
+    <div class="header">
+        <div class="header_top">
+            <!-- 滚动前首航的dwLOGO图片 -->
+            <a href="index.html" title="Daniel Wellington" class="header_logo"></a>
+        </div>
+        <ul class="header_btm" name="top">
+            <!-- 滚动后首航的dwLOGO图片 -->
+            <a href="#"  title="首页" class=""></a>
+            <li><a href="#"><span>礼品套装</span><em class="lineGif"></em></a></li>
+            <li>
+                <a href="#"><span>腕表</span><em class="lineGif"></em></a>
+                <div class="levelTwo wristWatch">
+                    <span class="triangle"></span>
+                    <ul class="inner_one">
+                        <li><a href="#">所有手表</a></li>
+                        <li><a href="#">男士手表</a></li>
+                        <li><a href="#">女士手表</a></li>
+                    </ul>
+                    <ul class="inner_two">
+                        <li><span class="inner_arrows icon iconfont">&#xe64a;</span><a href="#">Iconic系列</a></li>
+                        <li><span class="inner_arrows icon iconfont">&#xe64a;</span><a href="#">Classic系列</a></li>
+                        <li><span class="inner_arrows icon iconfont">&#xe64a;</span><a href="#">Petite系列</a></li>
+                    </ul>
+
+
+                    <!-- 带图片的第三个板块 -->
+                    <ul class="inner_three">
+                        <ul>
+                            <li><a href="#">所有手表</a></li>
+                        </ul>
+                    </ul>
+
+                    <ul class="inner_three">
+                        <ul>
+                            <li><a href="#">所有手表</a></li>
+                            <li><a href="#">皮质手表</a></li>
+                            <li><a href="#">织纹手表</a></li>
+                        </ul>
+                        <ul class="inner_three_img">
+                            <li><img src="img/levelTwo_img01.png" alt=""></li>
+                        </ul>
+                    </ul>
+
+                    <ul class="inner_three">
+                        <ul>
+                            <li><a href="#">所有手表</a></li>
+                            <li><a href="#">皮质手表</a></li>
+                            <li><a href="#">金属手表</a></li>
+                            <li><a href="#">织纹手表</a></li>
+                        </ul>
+                        <ul class="inner_three_img">
+                            <li><img src="img/levelTwo_img02.png" alt=""></li>
+                        </ul>
+                    </ul>
+                    <!-- 第三板块结束 -->
+
+                </div>
+            </li>
+            <li>
+                <a href="#"><span>配饰</span><em class="lineGif"></em></a>
+                <div class="levelTwo shoushi">
+                    <span class="triangle"></span>
+                    <ul class="inner_one">
+                        <li><a href="#">戒指</a></li>
+                        <li><a href="#">腕饰</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#"><span>表带</span><em class="lineGif"></em></a>
+                <div class="levelTwo">
+                    <span class="triangle"></span>
+                    <ul class="inner_one">
+                        <li><a href="#">选择表带</a></li>
+                        <li><a href="#">金属表带</a></li>
+                        <li><a href="#">织纹表带</a></li>
+                        <li><a href="#">皮质表带</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#"><span>常见问题</span><em class="lineGif"></em></a>
+                <div class="levelTwo">
+                    <span class="triangle"></span>
+                    <ul class="inner_one">
+                        <li><a href="#">订单查询</a></li>
+                        <li><a href="#">更换/调节表带</a></li>
+                        <li><a href="#">防伪声明</a></li>
+                        <li><a href="#">常见问题</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a href="#"><span>品牌故事</span><em class="lineGif"></em></a></li>
+            <li><a href="#"><span>查找门店</span><em class="lineGif"></em></a></li>
+            <a  title="用户" class="header_user">
+                <span class="icon iconfont header_icon">&#xe604;</span>
+            </a>
+            <div class="userLogin">
+                <div class="userTriangle"></div>
+                <div class="userList">
+                    <span>已是DW会员？</span>
+                    <a href="login.html">登陆</a>
+                    <span></span>
+                    <span>注册会员享受更多权益</span>
+                    <a href="register.html">加入会员</a>
+                </div>
+            </div>
+            <div class="userLogin" id="logined" >
+                <div class="userTriangle"></div>
+                <h1 class="userList user-name">
+                    <a href="#">欢迎您 
+                        <span class="account-name">李希</span>
+                    </a>
+                </h1>
+                <div class="user-power">
+                    <a href="#">查看我的订单</a>
+                    <a href="#">查看我的权益</a>
+                </div>
+                <hr>
+                <a class="button" href="#" id="user-layout">退出登录</a>
+            </div>
+            <a href="#" title="购物车" class="header_cart">
+                <span class="icon iconfont header_icon">&#xe600;</span>
+            </a>
+        </ul>
+    </div>
+
+<!-- productInfo_top -->
+    <div class="productInfo_top">
+        <div class="productInfo_main">
+            <div class="productInfo_main_box">
+                <!-- 左边图片展示部分 -->
+                <div class="productImg_Container">
+                    <div class="productImg_Container_img"></div>
+                    <div class="productImg_Container_smallImg">
+                        <div class="productImg_Container_smallImg_showBox">
+                            <div class="smallImg_showBox_LongBox"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右边操作部分 -->
+                <div class="productAction_Container">
+                    <h1>
+                        <span>Iconic | 28MM </span>
+                        L I N K
+                    </h1>
+                    <div class="product_color">
+                        <h3>颜 色</h3>
+                        <div class="product_select_attribute">
+                            <div class="product_color_attr"></div>
+                        </div>
+                    </div>
+                    <div class="product_size">
+                        <h3 class="attribute-header">尺 寸</h3>
+                        <div class="sizes">           
+                            <a href="#"><span class="size-text">28 </span></a>
+                            <a href="#"><span class="size-text">32 </span></a>
+                            <a href="#"><span class="size-text">36 </span></a>
+                        </div>
+                    </div>
+                    <div class="purchaseBox">
+                        <span class="purchaseBox_button">
+                            <span class="btn-price">
+                                <span class="price">￥&nbsp;1,490</span>                                
+                            </span>
+                            <span class="atc-right">
+                                <span class="btn-label">
+                                    <span>立即购买</span>
+                                </span>
+                                <div class="spinner"></div>
+                            </span>
+                        </span>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+        <!-- 定制贺卡 -->
+        <div class="custom_made">
+
+        </div>
+        <!-- 商品详情介绍 -->
+        <div class="product_parameter_list">
+        
+        </div>
+        <!-- 商品配置和服务 -->
+        <div class="product_config">
+            
+        </div>
+        <div class="product_config">
+
+        </div>
+        <div class="product_config">
+
+        </div>
+        <div class="product_config">
+
+        </div>
+        <!-- footer之前的价格说明 -->
+        <div class="priceExplain">
+            
+        </div>
+    </div>
+
+
+<!-- footer -->
+    <!-- footer info-->
+            <li class="footer_info">
+                <a href="#top" class="goTop"><img src="img\jiantou.png" alt="回到首页"></a>
+                <div class="footer_info_box">
+                    <div class="footer_info_left">
+                            <section>
+                                <ul>
+                                    <li>手表</li>
+                                    <li><a href="#">所有手表</a></li>
+                                    <li><a href="#">男士手表</a></li>
+                                    <li><a href="#">女士手表</a></li>
+                                    <li><a href="#">所有手表</a></li>
+                                    <li><a href="#">所有手表</a></li>
+                                    <li><a href="#">男士手表</a></li>
+                                    <li><a href="#">女士手表</a></li>
+                                </ul>
+                            </section>
+                            <section>
+                                <ul>
+                                    <li>手表</li>
+                                    <li><a href="#">所有手表</a></li>
+                                    <li><a href="#">男士手表</a></li>
+                                    <li><a href="#">女士手表</a></li>
+                                </ul>
+                            </section>
+                            <section>
+                                <ul>
+                                    <li>手表</li>
+                                    <li><a href="#">所有手表</a></li>
+                                    <li><a href="#">男士手表</a></li>
+                                    <li><a href="#">女士手表</a></li>
+                                </ul>
+                            </section>
+                            <section>
+                                <ul>
+                                    <li>手表</li>
+                                    <li><a href="#">所有手表</a></li>
+                                    <li><a href="#">男士手表</a></li>
+                                    <li><a href="#">女士手表</a></li>
+                                </ul>
+                            </section>
+                            <section>
+                                <ul>
+                                    <li>手表</li>
+                                    <li><a href="#">所有手表</a></li>
+                                    <li><a href="#">男士手表</a></li>
+                                    <li><a href="#">女士手表</a></li>
+                                </ul>
+                            </section>
+                            <section>
+                                <ul>
+                                    <li>手表</li>
+                                    <li><a href="#">所有手表</a></li>
+                                    <li><a href="#">男士手表</a></li>
+                                    <li><a href="#">女士手表</a></li>
+                                </ul>
+                            </section>
+                            <section>
+                                <ul>
+                                    <li>手表</li>
+                                    <li><a href="#">所有手表</a></li>
+                                    <li><a href="#">男士手表</a></li>
+                                    <li><a href="#">女士手表</a></li>
+                                </ul>
+                            </section>
+                    </div>
+                    <div class="footer_info_right">
+                        <section class="subscribe">
+                            <ul>
+                                <li>关注DW</li>
+                                <li>
+                                    <span class="social"><img src="img/weibo.png" alt="">微博&nbsp;</span>
+                                    <span class="social"><img src="img/weixin.png" alt="">微信&nbsp;</span>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="vip">
+                            <ul>
+                                <li>会员俱乐部</li>
+                                <li>
+                                    <a href="#" ><img src="img/dw-gold-logo.png" alt="daniel wellington"></a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="subNews">
+                            <ul>
+                                <li>订阅最新资讯</li>
+                                <li><p>第一时间获取最新资讯、活动邀请及优惠信息。</p></li>
+                                <li class="emailAdds">
+                                    <input style="outline:none;" type="text" class="Adds" placeholder="邮箱地址">
+                                    <button class="ads_btn"><span class="icon iconfont" style="color:rgb(96, 114, 133);">&#xe64a;</span></button>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <div class="footer_bottom">
+                    <ul class="made-menu ">
+                        <li class="">
+                            <a href="#">使用条款 </a>
+                        </li>
+                        <li class="">
+                            <a href="#">隐私保护政策 </a>
+                        </li>
+                        <li class="">
+                            <a href="#">防伪声明 </a>
+                        </li>
+                        <li class="">
+                            <a href="#">网站地图 </a>
+                        </li>
+                    </ul>
+                    <div class="footer_copyright">
+                        <div class="copyright_list">
+                            <span style="float:left;">
+                                <img src="img/policy.png">
+                            </span>
+                            <a href="" target="_blank">粤公网安备 44030502000796号</a> | 
+                            <a target="_blank" href="">粤ICP备15098750号-1M</a> | 
+                            <a target="_blank" href="">营业执照</a>
+                        </div>
+                        <p>ALL RIGHTS RESERVED. COPYRIGHT © 丹尼尔惠灵顿贸易（深圳）有限公司</p>        
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="js/gift.js"></script>
+<script src="js/cookieTools.js"></script>

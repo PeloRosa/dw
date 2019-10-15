@@ -56,6 +56,7 @@ window.onload = function(){
                 // 页面载入首先判断是否判断是否有cookie存在
             if(vipInfo){
                 $("#logined").css({display:"block"});
+                $(".account-name")[0].innerHTML = (JSON.parse(vipInfo)[0].username);
             }else{
                 $(".userLogin")[0].style.display = "block";
             }

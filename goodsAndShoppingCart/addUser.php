@@ -3,7 +3,7 @@
 	header("content-type","text/html;charset=utf-8");
 	
 	//1、建立连接并选择数据库
-	$con = mysql_connect("localhost","root","qianfeng");
+	$con = mysql_connect("localhost","root","root");
 	if(!$con){
 		die("连接失败".mysql_error());
 	}
