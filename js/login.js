@@ -153,8 +153,8 @@ $("#login_btn_submit").click(function(){
         xhr.open("post","php/login.php",true);
         xhr.onreadystatechange = function(){
             if(xhr.readyState==4 && xhr.status==200){
-                // console.log(xhr.responseText);
-                if(xhr.responseText == "0"){
+                console.log(xhr.responseText);
+                if(xhr.responseText == "-1"){
                     $(".mobliePhone_error")[0].innerHTML = "该手机号还未注册，请注册";
                     $(".mobliePhone_error")[0].style.color = "red";
                     $("#mobliePhone")[0].style.borderBottom = "3px solid red";
@@ -163,9 +163,7 @@ $("#login_btn_submit").click(function(){
                     $(".mobliePhone_error")[0].innerHTML = "登陆成功，即将跳转主页";
                     $(".mobliePhone_error")[0].style.display = "block";
                     $(".mobliePhone_error")[0].style.color = "green";
-                    let vipInfo = [{
-                        "mobliePhoneNum":`${$("#mobliePhone").val()}`
-                    }];
+                    let vipInfo = xhr.responseText;
                     addCookie("vipInfo",JSON.stringify(vipInfo),7);
                     setTimeout(function(){
                         window.location.href = "/DW/index.html";

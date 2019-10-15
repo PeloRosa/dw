@@ -155,10 +155,13 @@ $(".goPre").click(function(){
 $("body").click(function(e){
     let target = $(e.target);
     let vipInfo = JSON.parse(getCookie("vipInfo"));
+    console.log(vipInfo);
     if(target.is(".header_user") || target.is(".header_user span")){
             // 页面载入首先判断是否判断是否有cookie存在
         if(vipInfo){
             $("#logined").css({display:"block"});
+            // console.log(JSON.parse(vipInfo)[0].username);
+            $(".account-name")[0].innerHTML = (JSON.parse(vipInfo)[0].username);
         }else{
             $(".userLogin")[0].style.display = "block";
         }
