@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "435978",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e7e5",
+      "unicode_decimal": 59365
+    },
+    {
       "icon_id": "579861",
       "name": "微博",
       "font_class": "weibo",
@@ -32,6 +39,20 @@
       "font_class": "jiantou",
       "unicode": "e64a",
       "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "3091991",
+      "name": "向下",
+      "font_class": "xiangxia",
+      "unicode": "e779",
+      "unicode_decimal": 59257
+    },
+    {
+      "icon_id": "6756278",
+      "name": "QQ空间",
+      "font_class": "QQkongjian",
+      "unicode": "e603",
+      "unicode_decimal": 58883
     }
   ]
 }

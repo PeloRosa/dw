@@ -19,7 +19,9 @@
     //5.执行语句
     $sqlstr = "select * from dwvip where mobliePhoneNum='$mobliePhoneNum'";
     $result = mysql_query($sqlstr,$conn);
-    if($result){
+    $resultRows = mysql_num_rows($result);//获得结果的行数
+
+    if($resultRows){
         while($row = mysql_fetch_array($result)){
             $vipInfo = new vipInfo();
             $vipInfo->id = $row["id"];

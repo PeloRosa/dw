@@ -112,6 +112,7 @@ $("#mobliePhone").blur(function(){
         $(this).next().html("请输入正确电话号码格式");
         $(this).next()[0].style.display = "block";
         $(this)[0].style.borderBottom = "3px solid red";
+        $(this).next()[0].style.color = "red";
     }else{
         $(this).next().html("");
         $(this).next()[0].style.color = "green";

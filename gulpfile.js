@@ -33,6 +33,16 @@ gulp.task("watchall",async ()=>{
         .pipe(gulp.dest("D:\\phpStudy\\WWW\\DW\\js"));
     });
 
+    gulp.watch("img/**/*",async ()=>{
+        gulp.src("img/**/*")
+        .pipe(gulp.dest("D:\\phpStudy\\WWW\\DW\\img"));
+    });
+    
+    gulp.watch("font/**/*",async ()=>{
+        gulp.src("font/**/*")
+        .pipe(gulp.dest("D:\\phpStudy\\WWW\\DW\\font"));
+    });
+
     gulp.watch("css/*.css",async ()=>{
         gulp.src("css/*.css")
         .pipe(gulp.dest("D:\\phpStudy\\WWW\\DW\\css"));
