@@ -10,6 +10,7 @@
 .iconfont {
   font-family: "iconfont" !important;
   color:white;
+  font-size: 24px;
   font-style: normal;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -20,9 +21,9 @@
   content: "\e7e5";
 }
 
-.icon-weibo:before {
+/* .icon-weibo:before {
   content: "\e63d";
-}
+} */
 
 .icon-user:before {
   content: "\e604";
