@@ -872,8 +872,10 @@ input {
 .footer_info a:hover {
   color: white; }
 
-.header .header_top {
-  background: rgba(0, 14, 34, 0.9); }
+.header {
+  z-index: 3; }
+  .header .header_top {
+    background: rgba(0, 14, 34, 0.9); }
 
 .productInfo_top {
   width: 100%; }
@@ -894,6 +896,10 @@ input {
         width: 500px;
         height: 500px;
         position: relative; }
+        .productInfo_top .productInfo_main .productInfo_main_box .productImg_Container .productImg_Container_img .mrriorBox {
+          position: absolute;
+          width: 167px;
+          height: 202px; }
         .productInfo_top .productInfo_main .productInfo_main_box .productImg_Container .productImg_Container_img img {
           height: 100%;
           width: 100%; }
@@ -913,11 +919,13 @@ input {
             top: 22px;
             left: 20px; }
       .productInfo_top .productInfo_main .productInfo_main_box .productAction_Container {
+        position: relative;
         padding: 25px 70px;
         width: 360px;
         height: 557px;
         background-color: #fafafa; }
         .productInfo_top .productInfo_main .productInfo_main_box .productAction_Container h1 {
+          text-transform: uppercase;
           width: 306px;
           height: 54px;
           padding-top: 10px;
@@ -934,6 +942,16 @@ input {
             height: 18px;
             width: 306px;
             padding-bottom: 5px; }
+        .productInfo_top .productInfo_main .productInfo_main_box .productAction_Container .magnify_box {
+          display: none;
+          width: 500px;
+          height: 607px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-repeat: no-repeat;
+          background-color: white;
+          z-index: 1; }
         .productInfo_top .productInfo_main .productInfo_main_box .productAction_Container .product_color {
           margin: 0 auto;
           width: 346px;
@@ -1099,7 +1117,7 @@ input {
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            z-index: 2;
+            z-index: 1;
             box-shadow: 0 0 5px #ddd; }
           .productInfo_top .productInfo_main .productInfo_main_box .productImg_Container_smallImg .productImg_Container_smallImg_showBox .smallImg_rightArrow {
             background-position: 30px 0px;

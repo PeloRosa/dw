@@ -5,6 +5,7 @@ $baseHeight:300px;
     .header_top{
         background: rgba(0, 14, 34, 0.9);
     }
+    z-index:3;
 }
 .productInfo_top{
     width:100%;
@@ -31,6 +32,15 @@ $baseHeight:300px;
                 height:500px;
                 position:relative;
                 // background:pink;
+                .mrriorBox{
+                    position: absolute;
+                    // top:5px;
+                    // left:5px;
+                    width:167px;
+                    height:202px;
+                    // background-color: pink;
+                    // opacity: .5;
+                }
                 img{
                     height:100%;
                     width:100%;
@@ -54,11 +64,13 @@ $baseHeight:300px;
                 }
             }
             .productAction_Container{
+                position: relative;
                 padding: 25px 70px;
                 width:360px;
                 height:557px;
                 background-color: #fafafa;
                 h1{
+                    text-transform: uppercase;
                     width:306px;
                     height:54px;
                     padding:{
@@ -78,6 +90,17 @@ $baseHeight:300px;
                         padding-bottom: 5px;
                     }
                     margin:7px auto 40px;
+                }
+                .magnify_box{
+                    display:none;
+                    width:500px;
+                    height:607px;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    background-repeat: no-repeat;
+                    background-color: white;
+                    z-index:1;
                 }
                 .product_color{
                     margin:0 auto;
@@ -281,7 +304,7 @@ $baseHeight:300px;
                         height: 30px;
                         border-radius: 50%;
                         // background:white;
-                        z-index:2;
+                        z-index:1;
                         box-shadow: 0 0 5px #ddd;
                     }
                     .smallImg_rightArrow{
