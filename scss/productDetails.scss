@@ -289,6 +289,7 @@ $baseHeight:300px;
                         left:448px;
                     }
                     .smallImg_showBox_LongBox{
+                        // transition: .5s;
                         img{
                             height:87px;
                             width:87px;
@@ -304,7 +305,7 @@ $baseHeight:300px;
                         }
                         position:relative;
                         top:0;
-                        left: -260px;
+                        left: 0px;
                         width: 1905px;
                         height:87px;
                     }

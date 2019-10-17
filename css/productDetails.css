@@ -1107,7 +1107,7 @@ input {
           .productInfo_top .productInfo_main .productInfo_main_box .productImg_Container_smallImg .productImg_Container_smallImg_showBox .smallImg_showBox_LongBox {
             position: relative;
             top: 0;
-            left: -260px;
+            left: 0px;
             width: 1905px;
             height: 87px; }
             .productInfo_top .productInfo_main .productInfo_main_box .productImg_Container_smallImg .productImg_Container_smallImg_showBox .smallImg_showBox_LongBox img {

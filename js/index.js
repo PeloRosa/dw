@@ -52,6 +52,8 @@ window.onload = function(){
 
     this.bgImgGo();
 
+
+    
  
 
 }
